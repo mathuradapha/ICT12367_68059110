@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* พื้นหลังจาก heropatterns */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0c3fc;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23b388ff' fill-opacity='0.4'%3E%3Cpath d='M0 0h40v40H0zM40 40h40v40H40z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* กล่องหลัก */
+.container {
+    width: 450px;
+    padding: 2rem;
+    border-radius: 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgb(208, 0, 250);
+}
+
+/* ข้อความ Assignment */
+.assign {
+    font-size: 2rem;
+    color: #6a00ff;
+    margin-bottom: 5px;
+}
+
+/* ชื่อ-รหัส */
+.student {
+    color: #ff1493;
+}
+
+/* กลุ่มเรียน */
+.no {
+    margin-bottom: 10px;
+}
+
+/* หัวข้อ */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    color: #4b0082;
+}
+
+/* ตัวเลข */
+.count {
+    display: block;
+    font-size: 5rem;
+    margin: 1rem 0;
+    color: #ff9800;
+}
+
+/* ช่อง input */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
