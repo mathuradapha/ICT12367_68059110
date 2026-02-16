@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>บันทึกข้อมูลพนักงาน</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .card {
+        background: #fff;
+        width: 380px;
+        padding: 30px 25px;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        animation: fadeIn 1s ease;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 14px;
+        display: block;
+        margin-top: 12px;
+        color: #444;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px 12px;
+        margin-top: 6px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+        font-size: 14px;
+    }
+
+    input:focus, select:focus {
+        border-color: #6c63ff;
+        box-shadow: 0 0 8px rgba(108,99,255,0.5);
+    }
+
+    button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 12px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #43e97b, #38f9d7);
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        background: linear-gradient(135deg, #38f9d7, #43e97b);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>บันทึกข้อมูลพนักงาน</h2>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="กรอกชื่อ-นามสกุล">
+
+        <label>Email</label>
+        <input type="email" placeholder="example@email.com">
+
+        <label>Position</label>
+        <select>
+            <option>Manager</option>
+            <option>Developer</option>
+            <option>Designer</option>
+            <option>Accountant</option>
+        </select>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="0xx-xxx-xxxx">
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
