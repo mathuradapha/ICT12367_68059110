@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}{% endblock %}</title>
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+
+body{
+margin:0;
+background: linear-gradient(135deg,#fbc2eb,#a6c1ee);
+animation: bgmove 10s infinite alternate;
+}
+
+@keyframes bgmove{
+0%{background-position:0%;}
+100%{background-position:100%;}
+}
+
+nav{
+background: rgba(255,255,255,0.8);
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+backdrop-filter: blur(10px);
+z-index:10;
+}
+
+nav a{
+margin:0 20px;
+text-decoration:none;
+font-weight:bold;
+color:#333;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#6a11cb;
+text-shadow:0 0 10px #fff;
+}
+
+.banner{
+height:350px;
+background:url("https://picsum.photos/1600/600") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:50px;
+font-weight:bold;
+text-shadow:0 5px 15px black;
+animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(-30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px;
+animation: slideUp 1s ease;
+}
+
+@keyframes slideUp{
+from{opacity:0;transform:translateY(50px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.card{
+background:white;
+border-radius:20px;
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px) scale(1.01);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p{
+margin:5px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.1) rotate(2deg);
+filter:brightness(1.2);
+}
+
+.map-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.map-section p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.map-container {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="/">🏠 Home</a>
+<a href="/about">🖼 Gallery</a>
+<a href="/form">📝 Form</a>
+</nav>
+
+{% block banner %}{% endblock %}
+
+<main class="page-content">
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+<p>📞 ติดต่อเรา: 099-999-9999</p>
+<p>📧 Email: example@email.com</p>
+<p>📍 กรุงเทพฯ ประเทศไทย</p>
+<p>© 2026 My Django Website</p>
+</footer>
+
+</body>
+</html>

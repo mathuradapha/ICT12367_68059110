@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block banner %}
+<div class="banner">
+🌟 Welcome To My Website 🌟
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+<h2>📌 เกี่ยวกับเว็บไซต์</h2>
+<p>
+เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกการใช้ Django Framework  
+ออกแบบหน้าเว็บด้วย HTML และ CSS พร้อม Animation
+</p>
+</div>
+
+<div class="card">
+<h2>🎯 จุดประสงค์</h2>
+<ul>
+<li>เรียนรู้ Django Template</li>
+<li>ออกแบบเว็บไซต์ให้สวยงาม</li>
+<li>พัฒนาเว็บไซต์หลายหน้า</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💻 เทคโนโลยีที่ใช้</h2>
+<ul>
+<li>Python</li>
+<li>Django</li>
+<li>HTML / CSS</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>📂 เนื้อหาในเว็บ</h2>
+<p>
+Home แสดงข้อมูล  
+Gallery แสดงรูปภาพ  
+Form ใช้บันทึกข้อมูลพนักงาน
+</p>
+</div>
+
+<!-- แผนที่ -->
+<section class="map-section">
+  <h2>📍 ที่ตั้งของเรา</h2>
+  <p>กรุงเทพมหานคร ประเทศไทย</p>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=Bangkok&output=embed"
+      width="100%"
+      height="350"
+      style="border:0; border-radius:15px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+{% endblock %}

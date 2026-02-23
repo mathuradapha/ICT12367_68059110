@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<h1>🖼 Gallery ธรรมชาติ</h1>
+
+<div class="card">
+<p>รวมภาพสวย ๆ จากธรรมชาติ</p>
+</div>
+
+<div class="gallery">
+{% for i in "1234567891011121314151617181920" %}
+    <img src="https://picsum.photos/400/300?random={{ forloop.counter }}">
+{% endfor %}
+</div>
+{% endblock %}
