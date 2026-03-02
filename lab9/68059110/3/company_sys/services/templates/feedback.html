@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Feedback{% endblock %}
+
+{% block content %}
+<div class="card p-4 mx-auto"
+style="max-width:450px;
+background:rgba(255,255,255,0.85);
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);">
+
+<h3 class="text-center text-primary">💬 Feedback</h3>
+
+<label class="fw-bold">พิมพ์ความคิดเห็น</label>
+<textarea id="feedback" maxlength="100" class="form-control"></textarea>
+
+<div class="mt-2">
+ตัวอักษร: <span id="charCount">0</span>/100
+</div>
+
+<div class="progress mt-2">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<button class="btn btn-primary w-100 mt-3">ส่งความคิดเห็น</button>
+</div>
+
+<script>
+const textarea = document.getElementById("feedback");
+const counter = document.getElementById("charCount");
+const bar = document.getElementById("progressBar");
+const max = 100;
+
+textarea.addEventListener("input", ()=>{
+    let len = textarea.value.length;
+    counter.textContent = len;
+    bar.style.width = (len/max*100)+"%";
+    bar.style.background = len>=80 ? "#dc3545":"#0d6efd";
+});
+</script>
+{% endblock %}
